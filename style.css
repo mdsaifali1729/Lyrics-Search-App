@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #fff;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+
+  button:active {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .slideshow {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slideshow li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    -webkit-animation: imageAnimation 80s linear infinite;
+            animation: imageAnimation 80s linear infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .slideshow li:nth-child(1) {
+    background-image: url(image/bg-1.jpg);
+  }
+  
+  .slideshow li:nth-child(2) {
+    background-image: url(image/bg-2.jpg);
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+  }
+  
+  .slideshow li:nth-child(3) {
+    background-image: url(image/bg-3.jpg);
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+  }
+  
+  .slideshow li:nth-child(4) {
+    background-image: url(image/bg-4.jpg);
+    -webkit-animation-delay: 30s;
+            animation-delay: 30s;
+  }
+  
+  .slideshow li:nth-child(5) {
+    background-image: url(image/bg-5.jpg);
+    -webkit-animation-delay: 40s;
+            animation-delay: 40s;
+  }
+  
+  .slideshow li:nth-child(6) {
+    background-image: url(image/bg-6.jpg);
+    -webkit-animation-delay: 50s;
+            animation-delay: 50s;
+  }
+  
+  .slideshow li:nth-child(7) {
+    background-image: url(image/bg-7.jpg);
+    -webkit-animation-delay: 60s;
+            animation-delay: 60s;
+  }
+  
+  .slideshow li:nth-child(8) {
+    background-image: url(image/bg-8.jpg);
+    -webkit-animation-delay: 70s;
+            animation-delay: 70s;
+  }
+  
+
+
+
+  @-webkit-keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+  }
+  
+  /* Older browser support - .no-cssanimations class added by modernizr */
+  .no-cssanimations .slideshow li {
+    opacity: 1;
+  }
+  
+  
+header {
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 100px 0;
+    position: relative;
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  header * {
+    z-index: 1;
+  }
+
+  header h1 {
+    margin: 0 0 30px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  form {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+  }
+  
+  form input {
+    border: 0;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 15px 30px;
+    width: 100%;
+  }
+
+  form button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: #e056fd;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 30px;
+  }
+
+  .btn {
+    background-color: #8d56f6;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    padding: 4px 10px;
+  }
+  
+  ul.songs {
+    list-style: none;
+    padding: 0;
+  }
+  ul.songs li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 5px 0;
+    border-bottom: 1px solid #000;
+  }
+  
+  ul.songs li .cover-img {
+    width: 50px;
+  }
+  
+  ul.songs li .cover-img img {
+    width: 100%;
+  }
+
+  ul.songs li .song-title {
+    text-align: center;
+    width: 65%;
+  }
+  
+  .container {
+    margin: 30px auto;
+    max-width: 100%;
+    width: 500px;
+  }
+
+  .container h2 {
+    font-weight: 300;
+  }
+  
+  .container p {
+    text-align: center;
+  }
+  
+  .centered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .centered button {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    margin: 15px;
+  }
+  
+  .no-lyrics {
+    color: red;
+  }
+
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 20px 0  20px 0;
+  }
+  
+  footer .footer-content .name {
+    text-align: center;
+  }
+  
+  footer .social {
+    margin-top: 10px;
+  }
+  
+  footer .social a {
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0 5px;
+    text-align: center;
+  }
+
+  footer .social a i {
+    -webkit-transition: .5s all;
+    transition: .5s all;
+  }
+  
+  footer .social a i:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  
+  footer .social a i.fa-instagram-square {
+    color: #e4405f;
+  }
+  
+  footer .social a i.fa-twitter-square {
+    color: #55acee;
+  }
+  
+  footer .social a i.fa-github-square {
+    color: #131418;
+  }
